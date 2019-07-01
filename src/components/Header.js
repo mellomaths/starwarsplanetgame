@@ -7,7 +7,7 @@ export default class Header extends Component {
         return (
             <div className="row">
                 <div className="col s7">
-                    <h1>{planetName ? planetName : ''}</h1>
+                    <h1>{planetName}</h1>
                 </div>
 
                 <div className="col s5">
