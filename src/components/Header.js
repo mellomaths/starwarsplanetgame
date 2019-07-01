@@ -1,27 +1,24 @@
 import React, { Component } from 'react';
+import { Button, Icon, Row, Col } from 'react-materialize';
 
 export default class Header extends Component {
     render() {
         const { planetName } = this.props;
 
         return (
-            <div className="row">
-                <div className="col s7">
+            <Row>
+                <Col m={7} s={12}>
                     <h1>{planetName}</h1>
-                </div>
-
-                <div className="col s5">
-                    <button
-                        id="addNewTaskTrigger"
-                        data-target="addNewTaskModal"
-                        className="btn-large waves-effect waves-light right teal darken-1 modal-trigger"
+                </Col>
+                <Col m={5} s={12}>
+                    <Button
+                        className="btn-large waves-effect waves-light right teal darken-1"
                         onClick={this.props.pickAPlanet}
                     >
-                        Pick another planet
-                        <i className="material-icons right">autorenew</i>
-                    </button>
-                </div>
-            </div>
+                        Pick another planet<Icon className="right">autorenew</Icon>
+                    </Button>
+                </Col>
+            </Row>
         );
     }
 }
