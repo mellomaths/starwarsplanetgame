@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import api from '../services/api';
 import Header from './Header';
 import Planet from './Planet';
+import Loading from './Loading';
 
 export default class Dashboard extends Component {
     state = {
@@ -53,7 +54,7 @@ export default class Dashboard extends Component {
 
     render() {
         if (!this.state.loaded) {
-            return <></>;
+            return <Loading />;
         }
 
         return (
